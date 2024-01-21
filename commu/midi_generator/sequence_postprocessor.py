@@ -51,6 +51,7 @@ class PostprocessTask:
                 generation_result=seq,
             )
             output_file_path = self.set_output_file_path(idx)
+            decoded_midi.key_signature_changes = []
             decoded_midi.dump(output_file_path)
 
         return self.get_output_dir()
